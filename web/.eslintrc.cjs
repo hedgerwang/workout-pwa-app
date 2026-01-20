@@ -5,6 +5,7 @@ module.exports = {
     es2022: true,
     node: true,
   },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
@@ -12,8 +13,13 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ["react", "react-hooks", "react-refresh"],
-  extends: ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "react-refresh"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+  ],
   settings: {
     react: {
       version: "detect",
